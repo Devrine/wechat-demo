@@ -1,0 +1,5 @@
+# Node modules
+node_modules/
+
+# Node modules transformed by miniprogram devTools
+miniprogram_npm/
