@@ -1,0 +1,13 @@
+<!--pages/movies/movies.wxml-->
+
+<l-search-bar l-class="ex-search-bar" placeholder="小丑、你的名字" show-cancel="{{false}}" bind:linconfirm="onConfirm" />
+<view wx:if="{{!searchResult}}">
+  <movie-list data-type="in_theaters" bind:tap="onGoToMore" movies="{{inTheaters}}" title="正在热映" d-class="movie-list"/>
+  <movie-list data-type="coming_soon" bind:tap="onGoToMore" movies="{{comingSoon}}" title="即将上映" d-class="movie-list"/>
+  <movie-list data-type="top250" bind:tap="onGoToMore" movies="{{top250}}" title="豆瓣Top250" d-class="movie-list"/>
+</view>
+<view wx:else class="search-container">
+  <block wx:for="{{searchData}}" wx:key="index">
+      <movie movie="{{item}}"/>
+    </block>
+</view>

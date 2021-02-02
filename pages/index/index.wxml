@@ -1,0 +1,25 @@
+<!--pages/index/index.wxml-->
+<view>
+  <!-- 轮播图展示 -->
+  <swiper indicator-dots indicator-active-color="#ffffff" indicator-color="#bbbbbb" autoplay circular>
+    <swiper-item>
+      <image src="/images/page1/carou1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/page1/carou2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/page1/carou3.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/page1/carou4.jpg"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 文章展示 -->
+  <block wx:for="{{postList}}" wx:key="postId">
+  </block>
+
+  <block wx:for="{{postList}}" wx:key="postId">
+    <post res="{{item}}"/>
+  </block>
+</view>

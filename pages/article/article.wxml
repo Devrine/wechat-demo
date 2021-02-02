@@ -1,0 +1,23 @@
+<!--pages/article/article.wxml-->
+<view class="container">
+  <image class="head-img" src="{{postData.banner}}" />
+  <image bind:tap="onMusic" class="audio" src="/images/page1/music.png" />
+  <view class="head">
+    <image src="{{postData.avator}}"></image>
+    <text class="author">{{postData.author}}</text>
+    <text class="const-text">发表于</text>
+    <text class="date">{{postData.dateTime}}</text>
+  </view>
+  <text class="title">{{postData.title}}</text>
+  <view class="tool">
+    <view class="share">
+      <image wx:if="{{!collected}}" bind:tap="onCollect" src="/images/page1/precollect.png"></image>
+      <image wx:else bind:tap="onCollect" src="/images/page1/collect.png"></image>
+      <image bind:tap="onShare" src="/images/page1/share.png"></image>
+    </view>
+    <view class="line"></view>
+  </view>
+  <view class="article">
+    <view wx:for="{{paragraphs}}" class="paragraph" wx:key>{{item}}</view>
+  </view>
+</view>
