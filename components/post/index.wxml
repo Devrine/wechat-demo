@@ -1,0 +1,50 @@
+<!--components/post/index.wxml-->
+<!-- {{res.title}} -->
+  <view class="post-wrapper">
+    <view class="post" hover-class="hover" data-post-id="{{res.postId}}" bind:tap="onJumpToArticle">
+      <image class="img" src="{{res.banner}}" />
+      <text class="title">{{res.title}}</text>
+      <view class="info">
+        <image class="avator" src="{{res.avator}}" mode="widthFix" />
+        <text>{{res.author}}</text>
+        <text>日期: {{res.date}}</text>
+      </view>
+      <view class="content">{{res.description}}</view>
+      <view class="like">
+        <l-icon name="favor" />
+        <text>{{res.stars}}</text>
+        <l-icon name="eye" />
+        <text>{{res.views}}</text>
+      </view>
+      <!-- <view class="post-head">
+        <image src="{{res.imghead}}"></image>
+        <text>{{res.date}}</text>
+      </view>
+      <text class="post-content">{{res.content}}</text>
+      <view class="post-like">
+        <l-icon name="favor" />
+        <text>{{res.chat}}</text>
+        <l-icon name="eye" />
+        <text>{{res.view}}</text>
+      </view> -->
+    </view>
+  </view>
+
+    <!-- <view class="post-wrapper">
+      <view class="post" hover-class="hover" data-post-id="{{item.postId}}" bind:tap="onJumpToArticle">
+        <image class="img" src="{{item.imgContent}}" mode="aspectFill"></image>
+        <view class="title">{{item.title}}</view>
+        <view class="info">
+          <text>作者: </text>
+          <image class="avator" src="{{item.imghead}}" mode="widthFix" />
+          <text>日期: {{item.date}}</text>
+        </view>
+        <view class="content">{{item.content}}</view>
+        <view class="like">
+          <l-icon name="favor" />
+          <text>{{item.chat}}</text>
+          <l-icon name="eye" />
+          <text>{{item.view}}</text>
+        </view>
+      </view>
+    </view> -->

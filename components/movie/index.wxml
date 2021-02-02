@@ -1,0 +1,9 @@
+<!--components/movie/index.wxml-->
+<view class="container">
+  <image class="poster" v-if="movie.images.large" :src="movie.images.large"/>
+  <view class="title">{{movie.title}}</view>
+  <view class="rate-container">
+    <l-rate disabled score="{{movie.rating.stars/10}}" size="22" />
+    <text class="score">{{movie.rating.average}}</text>
+  </view>
+</view>

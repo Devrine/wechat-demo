@@ -1,0 +1,24 @@
+/* components/movie-list/index.wxss */
+.container{
+  padding: 36rpx 28rpx;
+  background-color: #fff;
+}
+.title-container{
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between; */
+  margin-bottom: 28rpx;
+}
+/* .movie-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} */
+.title-container , .movie-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.hover {
+  color: #C22A1E;
+}
